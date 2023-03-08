@@ -23,7 +23,7 @@ export default class App extends Component {
     const {search, page, disableBtn, totalHits, images} = this.state;
     
     if(prevState.search !== search){
-      this.setState({ images: [], page: 1, });
+      this.setState({ images: [] });
     }
 
     if(prevState.search !== search || prevState.page !== page) {
@@ -51,7 +51,7 @@ export default class App extends Component {
   }
  
   handleFormSubmit = (value) => {
-    this.setState({ search: value })
+    this.setState({ search: value, page: 1 })
     console.log(value)
   }
   handleMoreImage = () => {
