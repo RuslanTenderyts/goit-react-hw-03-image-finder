@@ -30,7 +30,8 @@ export default class App extends Component {
       this.setState({ isLoading: true, error: null, disableBtn: false,});
       this.getFetch( search, page );
     }
-    if ( images.length !== 0 && !disableBtn && totalHits > ( images.length + 12 )) {
+
+    if ( images.length !== 0 && !disableBtn && (totalHits / 12 > page)  ) {
       this.setState({ disableBtn: true });
     } 
   }
