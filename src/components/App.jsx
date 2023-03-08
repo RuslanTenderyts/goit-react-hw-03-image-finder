@@ -52,7 +52,6 @@ export default class App extends Component {
  
   handleFormSubmit = (value) => {
     this.setState({ search: value, page: 1 })
-    console.log(value)
   }
   handleMoreImage = () => {
     this.setState(({page}) => ({
@@ -75,9 +74,6 @@ export default class App extends Component {
 
         {disableBtn && <ButtonLoadMore onClick={this.handleMoreImage} ></ButtonLoadMore> }
         
-
-        
-
       </>
     );
   }

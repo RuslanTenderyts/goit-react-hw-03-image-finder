@@ -11,7 +11,6 @@ export const fetchImagesWithQuery = async (searchQuery, page) => {
   if(!response.data.total) {
     return Promise.reject( new Error( `По запиту "${searchQuery}" картинок не знайдено` ));
   };
-  console.log(response)
   return response.data;
 };
 
